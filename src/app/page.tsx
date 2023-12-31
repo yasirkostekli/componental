@@ -58,8 +58,7 @@ export default function Home() {
       alert("Adı: " + this.name + " | Age: " + this.age);
     }
     theme() {
-      
-
+      setButtonColor(colors.map((item) => item)[Math.floor(Math.random() * 6)]);
     }
   }
 
@@ -76,7 +75,8 @@ export default function Home() {
   const handleClick = (e: any) => {
     e.preventDefault();
     const test1 = new Test(deneme.name, deneme.age);
-    test1.alert();
+    //test1.alert();
+    test1.theme();
   };
 
   const themeChange = () => {
@@ -110,7 +110,7 @@ export default function Home() {
           <ParietteButton
             variant="contained"
             onClick={handleClick}
-            color={"info"}
+            color={buttonColor}
             size="large"
             deneme="150px"
             disabled={deneme.name === ""}
