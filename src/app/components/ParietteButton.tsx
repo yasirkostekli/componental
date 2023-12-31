@@ -16,12 +16,11 @@ const ParietteButton: React.FC<ParietteButtonProps> = ({ ...p }) => {
         ...p.sx,
         width: p.deneme ?? "100px", //Default değer atamaları yapılabilir.
         ":hover": {
-          backgroundColor: "#DEDAD0",
+          backgroundColor: "#B4AD9C",
           //transition: "2s",
         },
         ":disabled": {
           backgroundColor: "#54514A",
-          color: "#fff",
         },
       }}
     >
